@@ -1,0 +1,72 @@
+---
+title: "Workshop"
+author: "Josh"
+date: "2025-06-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Practice with R
+
+##Personal Info
+Joshua Robinson
+Duquesne University
+Pennsylvania, US
+email: [robinsonj9@duq.edu](robinsonj9@duq.edu)
+
+##Fun image
+
+![African Wild Dog](C:/Users/aipnurse2/OneDrive - Duquesne University/Pictures/background/African-WIld-Dog-1.jpg){width=50%}
+
+##Install Packages
+```{r, echo=FALSE, eval=FALSE}
+install.packages("tidyverse")
+install.packages("here")
+```
+
+
+##Read Packages
+```{r, , message=FALSE}
+
+library(tidyverse) # for data formatting, cleaning, and much more!
+library(here) #fixes file directory issues
+library(ggplot2) #plot data
+
+```
+
+##Read Data
+```{r import data}
+
+# read in the bear data and do some data tidying
+bear_damage <- read_csv(here('data/raw/pagube_2008_2016_spatial.csv'),
+                        
+                        # specify how the columns are read in
+                        col_types = cols(Damage = col_factor(),
+                                         Year = col_factor(),
+                                         Month = col_factor(),
+                                         Targetspp = col_factor(),
+                                         Landcover_code = col_factor(),
+                                         .default = col_number())) %>% 
+  
+  # set all column names to lowercase
+  rename_with(tolower)
+
+# check the internal structure of the data 
+str(bear_damage)
+
+```
+##Summarize
+```{r}
+summary <- summary(bear_damage$livestock_killed)
+summary
+```
+
+##Plot
+```{r ggplot}
+ggplot(bear_damage, aes(x = year, y = livestock_killed)) +
+  geom_point()
+```
+

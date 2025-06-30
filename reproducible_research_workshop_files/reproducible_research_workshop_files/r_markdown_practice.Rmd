@@ -1,0 +1,53 @@
+---
+title: "Untitled"
+author: "Marissa Dyck"
+date: "2025-06-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# Practice with R Markdown
+
+## In RStudio open a new R Markdown file
+
+## Modify the YAML – title, name, date
+
+## Remove existing comments and code chunks
+
+## Add the following elements to your R Markdown with headers and appropriate comments for each section and following coding best practices
+ * Personal info: name, pronouns, email (included as link), and why you chose this workshop 
+ * Insert a fun image of your choice and resize it  
+ * A code chunk that won’t be run when knit that installs packages (tidyverse, )  
+ * Code chunk that won’t display messages when knit that loads the installed libraries  
+ * Read in data in tidy format  
+ * Explore the data a bit using functions you're familiar with,  *or if new to R use online resources to look up some functions that provide information about a data frame*  
+ * Generate a plot with the data *this can be as simple or advanced as you want*  
+ * Do some data manipulation and save the new data to your environment AND to the data folder *this can be as simple as rearranging the row or column order or more advance*  
+ * Knit your .rmd file as a .html and .pdf *some systems may require additional software installed to knit as a pdf or word document, let us know if you run into issues and we can provide assistance to get you setup with the correct software for future coding* 
+ 
+ 
+
+
